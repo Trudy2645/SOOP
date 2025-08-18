@@ -1,0 +1,129 @@
+/* src/app/features/BLResultSection/BLResultSection.module.css */
+
+/* 전체 페이지 레이아웃 */
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+  color: #000;
+  font-family: Arial, sans-serif;
+}
+
+/* 헤더 */
+.header {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoCircle {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  background-color: #cbd5e0;
+  border-radius: 9999px;
+}
+
+.companyName {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* 메인 콘텐츠 영역 */
+.mainContent {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* 결과 컨테이너 */
+.resultContainer {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* 타이틀과 버튼 그룹을 함께 배치하는 컨테이너 */
+.titleWithButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+/* 섹션 타이틀 */
+.sectionTitle {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* 정보 설명 텍스트 */
+.infoDescription {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+/* 버튼 그룹 */
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+}
+
+/* 엑셀 다운로드 버튼 (흰색 스타일) */
+.copyButton {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1.5px solid #000 !important;
+}
+
+/* 정보 그리드 */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* 정보 아이템 (레이블 + 입력 필드) */
+.infoItem {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+}
+
+/* 정보 레이블 */
+.infoLabel {
+  font-size: 16px;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+/* 정보 입력 필드 */
+.infoInput {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.375rem;
+  background-color: #f8f9fa;
+  color: #000;
+  outline: none;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+/* 푸터 */
+.footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  border-top: 1px solid #e2e8f0;
+}

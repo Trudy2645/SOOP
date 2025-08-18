@@ -1,0 +1,180 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/features/FileUpload/FileUpload.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************/
+/* src/app/features/FileUpload/FileUpload.module.css */
+
+/* 전체 페이지 레이아웃 */
+.FileUpload_pageContainer__oye8h {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+  color: #000;
+  font-family: Arial, sans-serif;
+}
+
+/* 헤더 */
+.FileUpload_header__WpKov {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* 로고 컨테이너 */
+.FileUpload_logoContainer__kpeCX {
+  display: flex;
+  align-items: center;
+}
+
+/* 로고 원형 */
+.FileUpload_logoCircle__mGuty {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  background-color: #cbd5e0;
+  border-radius: 9999px;
+}
+
+/* 회사 이름 */
+.FileUpload_companyName__yvozW {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* 메인 콘텐츠 영역 */
+.FileUpload_mainContent__KLQu_ {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* 파일 업로드/BL 번호 추출 섹션 */
+.FileUpload_mainSection__7ym6D {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;  /* 구분선 */
+} 
+
+/* 업로드 정보 텍스트 영역 */
+.FileUpload_uploadInfo__RZDhH {
+  width: 50%;
+}
+
+/* 파일 업로드 UI 영역 */
+.FileUpload_uploadArea__uhFEs {
+  width: 50%;
+  padding-left: 2rem;
+}
+
+/* 파일 입력 필드와 버튼 컨테이너 */
+.FileUpload_inputAndButtonContainer__trphV {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* 섹션 타이틀 */
+.FileUpload_sectionTitle__DDEY6 {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* 파일 선택 입력창 컨테이너 */
+.FileUpload_fileInputContainer__HTu8r {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* 파일명 표시 입력 필드 */
+.FileUpload_fileDisplayInput__XOTna {
+  width: 60%;
+  padding: 8px;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.375rem;
+  background-color: #fff;
+  color: #6b7280;
+  cursor: pointer;
+  outline: none;
+}
+
+/* '파일 선택' 레이블 */
+.FileUpload_fileInputLabel__u0fYr {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+/* 기타 설명 섹션 */
+.FileUpload_otherSection__3H3tL {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+
+/* 기타 설명 텍스트 영역 */
+.FileUpload_otherInfo__g_al_ {
+  width: 50%;
+}
+
+/* 기타 설명 본문 */
+.FileUpload_otherInfoText__dFfD4 {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* 참고 사항 상자 */
+.FileUpload_noteBox__ZZkdH {
+  width: 50%;
+  padding: 1rem;
+  margin-left: 2rem;
+  border: 1px solid #cbd5e0;
+  background-color: #f8f9fa;
+}
+
+/* 참고 사항 제목 */
+.FileUpload_noteTitle__ZsXyp {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* 참고 사항 본문 */
+.FileUpload_noteText__MG3CY {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* 푸터 */
+.FileUpload_footer__CKxIn {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  border-top: 1px solid #e2e8f0;
+}
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/common/Button.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+/* src/app/components/common/Button.module.css */
+
+.Button_button__fOysu {
+  display: flex;
+  width: 240px;
+  padding: 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #000;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}

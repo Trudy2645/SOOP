@@ -1,0 +1,14 @@
+/* src/app/components/common/Input.module.css */
+
+.input {
+  flex-grow: 1;
+  padding: 8, 12px;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.375rem;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #3b82f6; /* Tailwind의 focus:ring-blue-500과 유사 */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}

@@ -1,0 +1,16 @@
+/* src/app/components/common/Button.module.css */
+
+.button {
+  display: flex;
+  width: 240px;
+  padding: 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #000;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
