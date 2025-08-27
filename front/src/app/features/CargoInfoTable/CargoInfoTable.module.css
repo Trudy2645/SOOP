@@ -5,15 +5,16 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #fff;
-  color: #000;
-  font-family: Arial, sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 }
 
 /* 헤더 */
 .header {
   padding: 1rem 2rem;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #fff;
 }
 
 .logoContainer {
@@ -25,7 +26,7 @@
   width: 1.5rem;
   height: 1.5rem;
   margin-right: 0.5rem;
-  background-color: #cbd5e0;
+  background-color: #d1d5db;
   border-radius: 9999px;
 }
 
@@ -38,99 +39,105 @@
 .mainContent {
   flex-grow: 1;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
 }
 
 /* 결과 컨테이너 */
 .resultContainer {
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #e2e8f0;
+  width: 100%;
 }
 
-/* 타이틀과 버튼 그룹을 함께 배치하는 컨테이너 */
+/* 타이틀과 버튼 그룹 */
 .titleWithButtons {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 1rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
 }
 
-/* 섹션 타이틀 */
 .sectionTitle {
-  font-size: 2.4rem;
-  font-weight: 600;
-  margin: 0;
+  font-size: 2rem; /* 글자 크기 키움 (1.8rem -> 2rem) */
+  font-weight: 700;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.copyButton {
+  background-color: #fff !important;
+  color: #374151 !important;
+  border: 1px solid #d1d5db !important;
+  font-weight: 500 !important;
 }
 
 /* 정보 설명 텍스트 */
 .infoDescription {
-  font-size: 1rem;
+  font-size: 1rem; /* 글자 크기 키움 (0.95rem -> 1rem) */
   color: #6b7280;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-/* 버튼 그룹 */
-.buttonGroup {
-  display: flex;
-  gap: 1rem;
+/* 정보 섹션 카드 */
+.infoSection {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+  overflow: hidden;
 }
 
-/* 엑셀 다운로드 버튼 (흰색 스타일) */
-.copyButton {
-  background-color: #fff !important;
-  color: #000 !important;
-  border: 1.5px solid #000 !important;
-}
-
-/* 정보 그리드 */
-.infoGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-/* 정보 아이템 (레이블 + 입력 필드) */
-.infoItem {
-  display: flex;
-  width: 200px;
-  flex-direction: column;
-}
-
-/* 정보 레이블 */
-.infoLabel {
-  font-size: 16px;
-  font-weight: 500;
-  color: #4b5563;
-  margin-bottom: 1rem;
-}
-
-/* 정보 입력 필드 */
-.infoInput {
+/* 정보 테이블 */
+.infoTable {
   width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #cbd5e0;
-  border-radius: 0.375rem;
-  background-color: #f8f9fa;
-  color: #000;
-  outline: none;
-  font-size: 20px;
-  font-weight: 550;
+  border-collapse: collapse;
+}
+
+.infoTable tr:last-child td {
+  border-bottom: none;
+}
+
+/* 테이블 셀 */
+.infoTable td {
+  padding: 1.1rem 1.25rem; /* 폰트 크기에 맞춰 패딩 조정 */
+  font-size: 1rem; /* 글자 크기 키움 (0.9rem -> 1rem) */
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: middle;
+}
+
+/* 테이블의 제목(label) 셀 */
+.infoLabelCell {
+  width: 15%;
+  min-width: 140px;
+  font-weight: 500;
+  color: #6b7280;
+  background-color: #f9fafb;
+}
+
+/* 테이블의 값(value) 셀 */
+.infoValueCell {
+  width: 35%;
+  font-weight: 500;
+  color: #1f2937;
+  word-break: break-all;
 }
 
 /* 푸터 */
 .footer {
-  border-top: 1px solid #e5e7eb;
   padding: 1.5rem 2rem;
   width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #e5e7eb;
 }
 
 .footerContent {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     color: #6b7280;
     font-size: 0.875rem;
@@ -141,7 +148,31 @@
   gap: 1.5rem;
 }
 
-.footerLinks a {
+/* 데이터 로딩 중 UI 스타일 */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
   color: #6b7280;
-  text-decoration: none;
+}
+
+.loadingContainer::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1.5rem;
+  border: 5px solid #e5e7eb;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }

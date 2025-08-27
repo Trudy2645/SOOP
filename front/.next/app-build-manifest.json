@@ -6,17 +6,17 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/features/FileUpload/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/features/FileUpload/page.css",
-      "static/chunks/app/features/FileUpload/page.js"
-    ],
     "/features/CargoInfoTable/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/features/CargoInfoTable/page.css",
       "static/chunks/app/features/CargoInfoTable/page.js"
+    ],
+    "/features/FileUpload/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/features/FileUpload/page.css",
+      "static/chunks/app/features/FileUpload/page.js"
     ]
   }
 }

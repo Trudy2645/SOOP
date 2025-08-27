@@ -1,4 +1,4 @@
-/* 전체 페이지 레이아웃 */
+/* 전체 페이지를 감싸는 최상위 컨테이너 */
 .pageContainer {
   display: flex;
   flex-direction: column;
@@ -8,13 +8,16 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* 헤더 */
+/* --- 헤더 영역 --- */
+
+/* 페이지 상단 헤더 영역 */
 .header {
   border-bottom: 1px solid #e5e7eb;
   padding: 1rem 2rem;
   width: 100%;
 }
 
+/* 헤더 내부 콘텐츠를 중앙 정렬하기 위한 컨테이너 */
 .headerContent {
   display: flex;
   justify-content: space-between;
@@ -23,12 +26,14 @@
   margin: 0 auto;
 }
 
+/* 로고와 회사 이름을 묶는 그룹 */
 .logoContainer {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
+/* 로고를 나타내는 원형 요소 */
 .logoCircle {
   width: 2rem;
   height: 2rem;
@@ -36,19 +41,23 @@
   border-radius: 50%;
 }
 
+/* 회사 이름 텍스트 */
 .companyName {
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0;
 }
 
+/* 로그인/회원가입 링크 */
 .authLinks a {
   color: #4b5563;
   text-decoration: none;
   font-size: 0.875rem;
 }
 
-/* 메인 콘텐츠 영역 */
+/* --- 메인 콘텐츠 영역 --- */
+
+/* 메인 콘텐츠 영역 (헤더와 푸터 사이) */
 .mainContent {
   flex-grow: 1;
   display: flex;
@@ -57,13 +66,14 @@
   padding: 2rem;
 }
 
+/* 파일 업로드 UI를 감싸는 카드 형태의 컨테이너 */
 .uploadCard {
   background-color: #ffffff;
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   padding: 40px;
   width: 100%;
-  max-width: 480px; /* 너비 조정 */
+  max-width: 480px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +81,7 @@
   text-align: center;
 }
 
-/* 제목 */
+/* 업로드 카드의 메인 제목 (예: "B/L") */
 .title {
   font-size: 2rem;
   font-weight: 700;
@@ -79,13 +89,16 @@
   margin: 0;
 }
 
+/* 업로드 카드의 부제목 */
 .subtitle {
   font-size: 1rem;
   color: #6c6c70;
   margin-top: -10px;
 }
 
-/* 파일 드롭 영역 */
+/* --- 파일 드롭 영역 --- */
+
+/* 파일 드래그 앤 드롭 및 클릭을 위한 영역 */
 .fileDropZone {
   width: 100%;
   padding: 40px 20px;
@@ -98,24 +111,81 @@
   align-items: center;
   cursor: pointer;
   transition: border-color 0.2s, background-color 0.2s;
+  position: relative;
+  overflow: hidden;
 }
 
-/* 파일을 드래그해서 위에 올렸을 때 스타일 */
+/* 파일 드롭존에 마우스를 올리거나 파일을 드래그 중일 때의 스타일 */
 .fileDropZone.dragging, .fileDropZone:hover {
   border-color: #2575e6;
   background-color: #f0f5ff;
 }
 
+/* 드롭존 내부의 안내 텍스트 */
 .dropZoneText {
   color: #6c6c70;
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
-  white-space: pre-wrap; /* \n 줄바꿈 적용 */
+  white-space: pre-wrap;
   word-break: break-all;
+  z-index: 10;
+  position: relative;
+  transition: color 0.2s ease-in-out;
 }
 
-/* 분석 시작 버튼 (크기 키움) */
+/* 드롭존 내부의 아이콘 */
+.dropZoneIcon {
+  font-size: 3.5rem;
+  color: #a1a1a6;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  z-index: 10;
+  position: relative;
+}
+
+/* 파일을 드래그 중일 때의 아이콘 스타일 */
+.fileDropZone.dragging .dropZoneIcon {
+  color: #2575e6;
+  transform: translateY(-5px);
+}
+
+/* 파일을 드래그할 때 드롭존 위에 나타나는 반투명 레이어 */
+.dragOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 117, 230, 0.1);
+  border: 2px dashed #2575e6;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2575e6;
+  font-size: 1.2rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 20;
+}
+
+/* 드래그 중일 때 오버레이를 보이게 하는 스타일 */
+.fileDropZone.dragging .dragOverlay {
+  opacity: 1;
+}
+
+/* 파일이 선택되었을 때의 안내 텍스트 스타일 */
+.fileDropZone.fileSelected .dropZoneText {
+  color: #1c1c1e;
+  font-weight: 500;
+}
+
+/* --- 버튼 --- */
+
+/* '분석 시작' 버튼 */
 .analyzeButton {
   display: inline-flex;
   align-items: center;
@@ -124,41 +194,47 @@
   color: #ffffff;
   border: none;
   border-radius: 8px;
-  padding: 16px 24px; /* 크기 키움 */
-  font-size: 1.125rem; /* 크기 키움 */
+  padding: 16px 24px;
+  font-size: 1.125rem;
   font-weight: 600;
   cursor: pointer;
   width: 100%;
   transition: background-color 0.2s;
 }
 
+/* 활성화된 버튼에 마우스를 올렸을 때의 스타일 */
 .analyzeButton:hover:not(:disabled) {
   background-color: #3c3c3e;
 }
 
+/* 비활성화된 버튼 스타일 */
 .analyzeButton:disabled {
   background-color: #d1d1d6;
   cursor: not-allowed;
 }
 
-/* --- 분석 진행 UI 섹션 --- */
+/* --- 분석 진행 UI --- */
+
+/* 분석 진행 상태(프로그레스바)를 표시하는 섹션 */
 .progressSection {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 24px; /* 위쪽 여백 */
-  border-top: 1px solid #e5e7eb; /* 구분선 */
+  margin-top: 24px;
+  border-top: 1px solid #e5e7eb;
   padding-top: 24px;
 }
 
+/* 분석 진행 섹션의 제목 (예: "문서 처리 중...") */
 .progressTitle {
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0 0 8px 0;
 }
 
+/* 분석 진행 섹션의 설명 텍스트 */
 .progressSubtitle {
   font-size: 0.9rem;
   color: #6c6c70;
@@ -167,6 +243,7 @@
   margin-bottom: 24px;
 }
 
+/* 프로그레스바의 배경(트랙) */
 .progressBarBackground {
   width: 100%;
   height: 8px;
@@ -175,6 +252,7 @@
   overflow: hidden;
 }
 
+/* 프로그레스바의 채워지는 부분 */
 .progressBarFill {
   width: 0%;
   height: 100%;
@@ -183,13 +261,16 @@
   transition: width 0.2s ease-in-out;
 }
 
-/* 푸터 */
+/* --- 푸터 영역 --- */
+
+/* 페이지 하단 푸터 영역 */
 .footer {
   border-top: 1px solid #e5e7eb;
   padding: 1.5rem 2rem;
   width: 100%;
 }
 
+/* 푸터 내부 콘텐츠를 중앙 정렬하기 위한 컨테이너 */
 .footerContent {
     display: flex;
     justify-content: space-between;
@@ -200,11 +281,13 @@
     font-size: 0.875rem;
 }
 
+/* 푸터의 개인정보 처리방침 등 링크 그룹 */
 .footerLinks {
   display: flex;
   gap: 1.5rem;
 }
 
+/* 푸터 내부 링크 */
 .footerLinks a {
   color: #6b7280;
   text-decoration: none;
