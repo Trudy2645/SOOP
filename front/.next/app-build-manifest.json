@@ -6,11 +6,11 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/features/CargoInfoTable/page": [
+    "/features/FileUpload/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/features/CargoInfoTable/page.css",
-      "static/chunks/app/features/CargoInfoTable/page.js"
+      "static/css/app/features/FileUpload/page.css",
+      "static/chunks/app/features/FileUpload/page.js"
     ],
     "/features/BLResultSection/page": [
       "static/chunks/webpack.js",
@@ -18,11 +18,11 @@
       "static/css/app/features/BLResultSection/page.css",
       "static/chunks/app/features/BLResultSection/page.js"
     ],
-    "/features/FileUpload/page": [
+    "/features/CargoInfoTable/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/features/FileUpload/page.css",
-      "static/chunks/app/features/FileUpload/page.js"
+      "static/css/app/features/CargoInfoTable/page.css",
+      "static/chunks/app/features/CargoInfoTable/page.js"
     ]
   }
 }

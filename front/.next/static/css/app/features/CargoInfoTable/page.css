@@ -125,11 +125,29 @@
 
 /* 푸터 */
 .CargoInfoTable_footer__NjtQr {
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.875rem;
+  border-top: 1px solid #e5e7eb;
+  padding: 1.5rem 2rem;
+  width: 100%;
+}
+
+.CargoInfoTable_footerContent__wC3OJ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.CargoInfoTable_footerLinks__bOYDu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.CargoInfoTable_footerLinks__bOYDu a {
   color: #6b7280;
-  border-top: 1px solid #e2e8f0;
+  text-decoration: none;
 }
 /*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/common/Button.module.css ***!

@@ -121,9 +121,27 @@
 
 /* 푸터 */
 .footer {
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.875rem;
+  border-top: 1px solid #e5e7eb;
+  padding: 1.5rem 2rem;
+  width: 100%;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footerLinks a {
   color: #6b7280;
-  border-top: 1px solid #e2e8f0;
+  text-decoration: none;
 }
