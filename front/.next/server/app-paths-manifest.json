@@ -1,5 +1,4 @@
 {
-  "/features/FileUpload/page": "app/features/FileUpload/page.js",
   "/features/CargoInfoTable/page": "app/features/CargoInfoTable/page.js",
-  "/features/BLResultSection/page": "app/features/BLResultSection/page.js"
+  "/features/FileUpload/page": "app/features/FileUpload/page.js"
 }

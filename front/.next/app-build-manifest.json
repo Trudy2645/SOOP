@@ -12,12 +12,6 @@
       "static/css/app/features/FileUpload/page.css",
       "static/chunks/app/features/FileUpload/page.js"
     ],
-    "/features/BLResultSection/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/features/BLResultSection/page.css",
-      "static/chunks/app/features/BLResultSection/page.js"
-    ],
     "/features/CargoInfoTable/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
