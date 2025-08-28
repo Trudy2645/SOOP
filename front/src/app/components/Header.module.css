@@ -1,10 +1,11 @@
-/* ... (기존 헤더 스타일은 그대로 유지) ... */
-
+/* 페이지 상단 헤더 영역의 기본 스타일 */
 .header {
   padding: 1rem 2rem;
   border-bottom: 1px solid #e5e7eb;
   background-color: #fff;
 }
+
+/* 헤더 내부 콘텐츠를 중앙 정렬하고 최대 너비를 지정하는 컨테이너 */
 .headerContent {
   display: flex;
   justify-content: space-between;
@@ -12,49 +13,31 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-.logoLink { /* Link 컴포넌트의 기본 스타일 제거 */
+
+/* 로고와 회사 이름을 감싸는 Link 컴포넌트의 스타일 */
+.logoLink {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
-  display: flex; /* logoContainer가 Link의 유일한 자식이 되므로 Link에 flex 적용 */
-  align-items: center;
-}
-.logoContainer {
   display: flex;
   align-items: center;
-  gap: 0.75rem; /* 로고 이미지와 텍스트 사이 간격 */
-}
-/* 👇 이 부분은 Image 컴포넌트 사용으로 인해 더 이상 필요 없습니다.
-.logoCircle {
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #d1d5db;
-  border-radius: 9999px;
-}
-*/
-/* Image 컴포넌트에 적용할 스타일 */
-.actualLogo {
-  /* 필요에 따라 로고 이미지의 크기나 다른 스타일을 지정합니다. */
-  /* width와 height는 next/image에서 props로 주므로, 여기서 오버라이드할 필요는 없습니다. */
-  /* 예를 들어, 반응형으로 만들고 싶다면 max-width: 100%; height: auto; 등을 추가할 수 있습니다. */
 }
 
-.companyName {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #1f2937; /* 글자색을 명확히 지정 */
-  white-space: nowrap; /* 글자가 줄바꿈되지 않도록 방지 */
-}
+/* '로그인', '회원가입' 링크를 묶는 그룹 */
 .authLinks {
   display: flex;
-  gap: 1rem; /* 로그인/회원가입 링크 사이 간격 */
+  gap: 1rem;
 }
+
+/* '로그인', '회원가입' 각 링크의 기본 스타일 */
 .authLinks a {
   color: #4b5563;
   text-decoration: none;
   font-size: 0.875rem;
   transition: color 0.2s;
 }
+
+/* 로그인/회원가입 링크에 마우스를 올렸을 때의 스타일 */
 .authLinks a:hover {
-  color: #1f2937; /* 호버 시 색상 변경 */
+  color: #1f2937;
 }

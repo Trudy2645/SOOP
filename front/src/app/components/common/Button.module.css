@@ -1,9 +1,9 @@
+/* 버튼의 기본 스타일 */
 .button {
-  display: inline-flex; /* 👇 아이콘과 텍스트를 나란히 배치 */
-  align-items: center;  /* 👇 세로 중앙 정렬 */
-  justify-content: center; /* 👇 가로 중앙 정렬 (필요시) */
-  gap: 0.5rem;          /* 👇 아이콘과 텍스트 사이 간격 */
-  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   white-space: nowrap;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
@@ -17,28 +17,31 @@
   transition: background-color 0.2s, transform 0.1s;
 }
 
+/* 비활성화되지 않은 버튼에 마우스를 올렸을 때의 스타일 */
 .button:hover:not(:disabled) {
   background-color: #374151;
   transform: translateY(-1px);
 }
 
+/* 비활성화되지 않은 버튼을 클릭했을 때의 스타일 */
 .button:active:not(:disabled) {
   transform: translateY(0);
 }
 
+/* 버튼이 비활성화되었을 때의 스타일 */
 .button:disabled {
   background-color: #d1d5db;
   cursor: not-allowed;
 }
 
-/* 추가: 아이콘 자체에 대한 스타일 (필요시) */
+/* 버튼 내부에 아이콘이 있을 경우 아이콘을 감싸는 컨테이너 */
 .buttonIcon {
-  display: flex; /* SVG 아이콘 정렬을 위해 */
+  display: flex;
   align-items: center;
 }
+
+/* 아이콘으로 사용되는 SVG 요소의 크기 지정 */
 .buttonIcon svg {
-  width: 1.25rem; /* 아이콘 크기 조절 */
+  width: 1.25rem;
   height: 1.25rem;
-  /* 아이콘 색상을 텍스트 색상에 맞추려면 */
-  /* stroke: currentColor; */ 
 }

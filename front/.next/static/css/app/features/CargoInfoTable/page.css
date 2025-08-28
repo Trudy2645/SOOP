@@ -137,12 +137,12 @@
 /*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/common/Button.module.css ***!
   \***************************************************************************************************************************************************************************************************************************************************************************************/
+/* 버튼의 기본 스타일 */
 .Button_button__fOysu {
-  display: inline-flex; /* 👇 아이콘과 텍스트를 나란히 배치 */
-  align-items: center;  /* 👇 세로 중앙 정렬 */
-  justify-content: center; /* 👇 가로 중앙 정렬 (필요시) */
-  gap: 0.5rem;          /* 👇 아이콘과 텍스트 사이 간격 */
-  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   white-space: nowrap;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
@@ -156,41 +156,45 @@
   transition: background-color 0.2s, transform 0.1s;
 }
 
+/* 비활성화되지 않은 버튼에 마우스를 올렸을 때의 스타일 */
 .Button_button__fOysu:hover:not(:disabled) {
   background-color: #374151;
   transform: translateY(-1px);
 }
 
+/* 비활성화되지 않은 버튼을 클릭했을 때의 스타일 */
 .Button_button__fOysu:active:not(:disabled) {
   transform: translateY(0);
 }
 
+/* 버튼이 비활성화되었을 때의 스타일 */
 .Button_button__fOysu:disabled {
   background-color: #d1d5db;
   cursor: not-allowed;
 }
 
-/* 추가: 아이콘 자체에 대한 스타일 (필요시) */
+/* 버튼 내부에 아이콘이 있을 경우 아이콘을 감싸는 컨테이너 */
 .Button_buttonIcon__3mCPU {
-  display: flex; /* SVG 아이콘 정렬을 위해 */
+  display: flex;
   align-items: center;
 }
+
+/* 아이콘으로 사용되는 SVG 요소의 크기 지정 */
 .Button_buttonIcon__3mCPU svg {
-  width: 1.25rem; /* 아이콘 크기 조절 */
+  width: 1.25rem;
   height: 1.25rem;
-  /* 아이콘 색상을 텍스트 색상에 맞추려면 */
-  /* stroke: currentColor; */ 
 }
 /*!********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Header.module.css ***!
   \********************************************************************************************************************************************************************************************************************************************************************************/
-/* ... (기존 헤더 스타일은 그대로 유지) ... */
-
+/* 페이지 상단 헤더 영역의 기본 스타일 */
 .Header_header__b54d9 {
   padding: 1rem 2rem;
   border-bottom: 1px solid #e5e7eb;
   background-color: #fff;
 }
+
+/* 헤더 내부 콘텐츠를 중앙 정렬하고 최대 너비를 지정하는 컨테이너 */
 .Header_headerContent__oT4m4 {
   display: flex;
   justify-content: space-between;
@@ -198,51 +202,33 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-.Header_logoLink__50Wcc { /* Link 컴포넌트의 기본 스타일 제거 */
+
+/* 로고와 회사 이름을 감싸는 Link 컴포넌트의 스타일 */
+.Header_logoLink__50Wcc {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
-  display: flex; /* logoContainer가 Link의 유일한 자식이 되므로 Link에 flex 적용 */
-  align-items: center;
-}
-.Header_logoContainer__zQZxe {
   display: flex;
   align-items: center;
-  gap: 0.75rem; /* 로고 이미지와 텍스트 사이 간격 */
-}
-/* 👇 이 부분은 Image 컴포넌트 사용으로 인해 더 이상 필요 없습니다.
-.logoCircle {
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #d1d5db;
-  border-radius: 9999px;
-}
-*/
-/* Image 컴포넌트에 적용할 스타일 */
-.Header_actualLogo__h0chO {
-  /* 필요에 따라 로고 이미지의 크기나 다른 스타일을 지정합니다. */
-  /* width와 height는 next/image에서 props로 주므로, 여기서 오버라이드할 필요는 없습니다. */
-  /* 예를 들어, 반응형으로 만들고 싶다면 max-width: 100%; height: auto; 등을 추가할 수 있습니다. */
 }
 
-.Header_companyName__Bbklh {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #1f2937; /* 글자색을 명확히 지정 */
-  white-space: nowrap; /* 글자가 줄바꿈되지 않도록 방지 */
-}
+/* '로그인', '회원가입' 링크를 묶는 그룹 */
 .Header_authLinks__q__1N {
   display: flex;
-  gap: 1rem; /* 로그인/회원가입 링크 사이 간격 */
+  gap: 1rem;
 }
+
+/* '로그인', '회원가입' 각 링크의 기본 스타일 */
 .Header_authLinks__q__1N a {
   color: #4b5563;
   text-decoration: none;
   font-size: 0.875rem;
   transition: color 0.2s;
 }
+
+/* 로그인/회원가입 링크에 마우스를 올렸을 때의 스타일 */
 .Header_authLinks__q__1N a:hover {
-  color: #1f2937; /* 호버 시 색상 변경 */
+  color: #1f2937;
 }
 /*!********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Footer.module.css ***!

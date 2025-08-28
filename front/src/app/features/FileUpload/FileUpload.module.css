@@ -1,8 +1,8 @@
-/* --- 메인 콘텐츠 --- */
+/* 파일 업로드 페이지의 전체 콘텐츠를 감싸는 2단 그리드 컨테이너 */
 .uploadContainer {
   width: 100%;
-  max-width: 1200px; /* 헤더/푸터와 동일한 최대 너비 */
-  margin: 0 auto;     /* 중앙 정렬 */
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 2.5rem 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -10,22 +10,26 @@
   align-items: start;
 }
 
+/* 페이지 좌측의 설명 텍스트 영역 */
 .uploadInfo {
   text-align: left;
 }
 
+/* 페이지의 메인 제목 (예: "B/L & INOICE 파일 업로드") */
 .sectionTitle {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
+/* 페이지에 대한 설명 텍스트 */
 .infoDescription {
   font-size: 1.2rem;
   color: #6b7280;
   line-height: 1.7;
 }
 
+/* 페이지 우측의 파일 업로드 UI를 감싸는 카드 */
 .uploadActionCard {
   background-color: #ffffff;
   border-radius: 0.75rem;
@@ -37,7 +41,7 @@
   gap: 1.5rem;
 }
 
-/* --- 파일 드롭 영역 --- */
+/* 파일을 드래그 앤 드롭 하거나 클릭할 수 있는 영역 */
 .fileDropZone {
   width: 100%;
   padding: 2.5rem 1.5rem;
@@ -55,11 +59,13 @@
   box-sizing: border-box;
 }
 
+/* 파일 드롭 영역 위에 마우스를 올리거나 파일을 드래그 중일 때의 스타일 */
 .fileDropZone.dragging, .fileDropZone:hover {
   border-color: #2575e6;
   background-color: #f0f5ff;
 }
 
+/* 파일 드롭 영역 내부의 폴더/파일 아이콘 */
 .dropZoneIcon {
   font-size: 2.5rem;
   color: #9ca3af;
@@ -67,11 +73,13 @@
   transition: all 0.2s ease-in-out;
 }
 
+/* 파일을 드래그 중일 때 아이콘 스타일 */
 .fileDropZone.dragging .dropZoneIcon {
   color: #2575e6;
   transform: scale(1.1);
 }
 
+/* '파일을 드래그하거나...' 안내 문구 */
 .dropZoneText {
   color: #6b7280;
   font-size: 0.95rem;
@@ -83,11 +91,13 @@
   transition: color 0.2s ease-in-out;
 }
 
+/* 파일이 선택되었을 때 파일 이름 텍스트 스타일 */
 .fileDropZone.fileSelected .dropZoneText {
   color: #1f2937;
   font-weight: 500;
 }
 
+/* 파일을 드래그할 때 나타나는 반투명 오버레이 */
 .dragOverlay {
   position: absolute;
   top: 0;
@@ -107,11 +117,12 @@
   background-color: rgba(240, 245, 255, 0.7);
 }
 
+/* 드래그 중일 때 오버레이를 보이게 하는 스타일 */
 .fileDropZone.dragging .dragOverlay {
   opacity: 1;
 }
 
-/* --- 버튼 및 분석 진행 UI --- */
+/* '분석 시작' 버튼 */
 .analyzeButton {
   display: inline-flex;
   align-items: center;
@@ -128,15 +139,18 @@
   transition: background-color 0.2s;
 }
 
+/* 분석 시작 버튼에 마우스를 올렸을 때의 스타일 */
 .analyzeButton:hover:not(:disabled) {
   background-color: #374151;
 }
 
+/* 분석 시작 버튼이 비활성화되었을 때의 스타일 */
 .analyzeButton:disabled {
   background-color: #d1d5db;
   cursor: not-allowed;
 }
 
+/* 분석 진행 상태를 표시하는 전체 영역 */
 .progressSection {
   display: flex;
   flex-direction: column;
@@ -148,12 +162,14 @@
   padding-top: 1.5rem;
 }
 
+/* '문서 처리 중...'과 같은 진행 상태 제목 */
 .progressTitle {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
+/* 진행 상태에 대한 부가 설명 텍스트 */
 .progressSubtitle {
   font-size: 0.875rem;
   color: #6b7280;
@@ -162,6 +178,7 @@
   margin-bottom: 1rem;
 }
 
+/* 진행률 표시 막대의 배경 트랙 */
 .progressBarBackground {
   width: 100%;
   height: 8px;
@@ -170,10 +187,78 @@
   overflow: hidden;
 }
 
+/* 실제 진행률을 나타내는 파란색 막대 */
 .progressBarFill {
   width: 0%;
   height: 100%;
   background-color: #2575e6;
   border-radius: 4px;
   transition: width 0.2s ease-in-out;
+}
+
+/* 파일 목록을 감싸는 컨테이너 */
+.fileListContainer {
+  width: 100%;
+  text-align: left;
+  align-self: flex-start;
+}
+
+/* '선택된 파일' 제목과 '전체 삭제' 버튼을 감싸는 헤더 */
+.fileListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0 0.5rem;
+}
+
+/* '선택된 파일' 제목 */
+.fileListTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* '전체 삭제' 버튼 */
+.clearButton {
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* 전체 삭제 버튼에 마우스를 올렸을 때의 스타일 */
+.clearButton:hover {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+/* 파일명 목록 (ul) */
+.fileList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+/* 개별 파일명 (li) */
+.fileListItem {
+  font-size: 0.9rem;
+  color: #4b5563;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

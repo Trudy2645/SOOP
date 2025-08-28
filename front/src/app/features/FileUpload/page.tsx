@@ -9,27 +9,42 @@ export default function FileUploadPage() {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const router = useRouter();
 
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [isAnalyzing, setIsAnalyzing] = useState<boolean>(false);
   const [progress, setProgress] = useState<number>(0);
   const [isDragging, setIsDragging] = useState<boolean>(false);
-  const handleFileSelect = (file: File | undefined) => {
-    if (file) setSelectedFile(file);
-    else setSelectedFile(null);
+
+  // 1. 파일을 '추가'하도록 로직 수정
+  const handleFileSelect = (files: FileList | null) => {
+    if (files && files.length > 0) {
+      const newFiles = Array.from(files);
+      // 기존 파일 목록(prevFiles)에 새 파일 목록을 합쳐서 state 업데이트
+      setSelectedFiles(prevFiles => [...prevFiles, ...newFiles]);
+    }
+  };
+
+  // 2. 파일 목록 전체 삭제 핸들러 추가
+  const handleClearFiles = (e: React.MouseEvent) => {
+    e.stopPropagation(); // 이벤트 버블링 방지
+    setSelectedFiles([]);
   };
 
   const handleTriggerFileInput = () => {
+    // 파일 추가 시 input의 이전 값을 초기화해야 동일한 파일을 다시 추가할 수 있습니다.
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
     if (isAnalyzing) return;
     fileInputRef.current?.click();
   };
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (isAnalyzing) return;
-    handleFileSelect(event.target.files?.[0]);
+    handleFileSelect(event.target.files);
   };
 
   const handleAnalyzeClick = () => {
-    if (selectedFile) {
+    if (selectedFiles.length > 0) {
       setProgress(0);
       setIsAnalyzing(true);
     } else {
@@ -44,7 +59,7 @@ export default function FileUploadPage() {
     e.preventDefault();
     setIsDragging(false);
     if (!isAnalyzing) {
-      handleFileSelect(e.dataTransfer.files?.[0]);
+      handleFileSelect(e.dataTransfer.files);
     }
   };
 
@@ -65,10 +80,9 @@ export default function FileUploadPage() {
     }
   }, [progress, router]);
 
-  const dropZoneClass = `${styles.fileDropZone} ${isDragging ? styles.dragging : ''} ${selectedFile ? styles.fileSelected : ''}`;
-  const dropZoneText = selectedFile ? selectedFile.name : "파일을 드래그하거나\n클릭하여 선택하세요";
+  const dropZoneClass = `${styles.fileDropZone} ${selectedFiles.length > 0 ? styles.fileSelected : ''} ${isDragging ? styles.dragging : ''}`;
 
-   return (
+  return (
     <Layout>
       <div className={styles.uploadContainer}>
         <div className={styles.uploadInfo}>
@@ -85,12 +99,39 @@ export default function FileUploadPage() {
             onClick={handleTriggerFileInput}
             onDragOver={handleDragOver} onDragEnter={handleDragEnter} onDragLeave={handleDragLeave} onDrop={handleDrop}
           >
-            <input type="file" ref={fileInputRef} onChange={handleFileChange} accept="image/*, application/pdf" style={{ display: "none" }} disabled={isAnalyzing} />
-            <div className={styles.dropZoneIcon}>{selectedFile ? '📄' : '📁'}</div>
-            <p className={styles.dropZoneText}>{dropZoneText}</p>
-            <div className={styles.dragOverlay}>여기에 파일을 드롭하세요!</div>
+            <input
+              type="file"
+              ref={fileInputRef}
+              onChange={handleFileChange}
+              accept="image/*, application/pdf"
+              style={{ display: "none" }}
+              disabled={isAnalyzing}
+              multiple
+            />
+            {selectedFiles.length === 0 ? (
+              <>
+                <div className={styles.dropZoneIcon}>📁</div>
+                <p className={styles.dropZoneText}>파일을 드래그하거나<br/>클릭하여 추가하세요</p>
+              </>
+            ) : (
+              <div className={styles.fileListContainer}>
+                {/* 3. '전체 삭제' 버튼 UI 추가 */}
+                <div className={styles.fileListHeader}>
+                  <h3 className={styles.fileListTitle}>선택된 파일 ({selectedFiles.length}개)</h3>
+                  <button onClick={handleClearFiles} className={styles.clearButton}>전체 삭제</button>
+                </div>
+                <ul className={styles.fileList}>
+                  {selectedFiles.map((file, index) => (
+                    <li key={index} className={styles.fileListItem}>
+                      <span>📄</span> {file.name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <div className={styles.dragOverlay}>여기에 파일들을 드롭하세요!</div>
           </div>
-          <button className={styles.analyzeButton} onClick={handleAnalyzeClick} disabled={!selectedFile || isAnalyzing}>
+          <button className={styles.analyzeButton} onClick={handleAnalyzeClick} disabled={selectedFiles.length === 0 || isAnalyzing}>
             분석 시작
           </button>
           {isAnalyzing && (

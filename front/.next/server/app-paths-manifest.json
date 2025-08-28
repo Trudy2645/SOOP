@@ -1,6 +1,7 @@
 {
   "/features/FileUpload/page": "app/features/FileUpload/page.js",
+  "/features/NoCargoSection/page": "app/features/NoCargoSection/page.js",
+  "/features/CargoInfoTable/page": "app/features/CargoInfoTable/page.js",
   "/(auth)/signup/page": "app/(auth)/signup/page.js",
-  "/(auth)/login/page": "app/(auth)/login/page.js",
-  "/features/CargoInfoTable/page": "app/features/CargoInfoTable/page.js"
+  "/(auth)/login/page": "app/(auth)/login/page.js"
 }

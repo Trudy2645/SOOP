@@ -1,13 +1,14 @@
 /*!********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Header.module.css ***!
   \********************************************************************************************************************************************************************************************************************************************************************************/
-/* ... (기존 헤더 스타일은 그대로 유지) ... */
-
+/* 페이지 상단 헤더 영역의 기본 스타일 */
 .Header_header__b54d9 {
   padding: 1rem 2rem;
   border-bottom: 1px solid #e5e7eb;
   background-color: #fff;
 }
+
+/* 헤더 내부 콘텐츠를 중앙 정렬하고 최대 너비를 지정하는 컨테이너 */
 .Header_headerContent__oT4m4 {
   display: flex;
   justify-content: space-between;
@@ -15,51 +16,33 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-.Header_logoLink__50Wcc { /* Link 컴포넌트의 기본 스타일 제거 */
+
+/* 로고와 회사 이름을 감싸는 Link 컴포넌트의 스타일 */
+.Header_logoLink__50Wcc {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
-  display: flex; /* logoContainer가 Link의 유일한 자식이 되므로 Link에 flex 적용 */
-  align-items: center;
-}
-.Header_logoContainer__zQZxe {
   display: flex;
   align-items: center;
-  gap: 0.75rem; /* 로고 이미지와 텍스트 사이 간격 */
-}
-/* 👇 이 부분은 Image 컴포넌트 사용으로 인해 더 이상 필요 없습니다.
-.logoCircle {
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #d1d5db;
-  border-radius: 9999px;
-}
-*/
-/* Image 컴포넌트에 적용할 스타일 */
-.Header_actualLogo__h0chO {
-  /* 필요에 따라 로고 이미지의 크기나 다른 스타일을 지정합니다. */
-  /* width와 height는 next/image에서 props로 주므로, 여기서 오버라이드할 필요는 없습니다. */
-  /* 예를 들어, 반응형으로 만들고 싶다면 max-width: 100%; height: auto; 등을 추가할 수 있습니다. */
 }
 
-.Header_companyName__Bbklh {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #1f2937; /* 글자색을 명확히 지정 */
-  white-space: nowrap; /* 글자가 줄바꿈되지 않도록 방지 */
-}
+/* '로그인', '회원가입' 링크를 묶는 그룹 */
 .Header_authLinks__q__1N {
   display: flex;
-  gap: 1rem; /* 로그인/회원가입 링크 사이 간격 */
+  gap: 1rem;
 }
+
+/* '로그인', '회원가입' 각 링크의 기본 스타일 */
 .Header_authLinks__q__1N a {
   color: #4b5563;
   text-decoration: none;
   font-size: 0.875rem;
   transition: color 0.2s;
 }
+
+/* 로그인/회원가입 링크에 마우스를 올렸을 때의 스타일 */
 .Header_authLinks__q__1N a:hover {
-  color: #1f2937; /* 호버 시 색상 변경 */
+  color: #1f2937;
 }
 /*!********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Footer.module.css ***!
@@ -126,11 +109,11 @@ body {
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/features/FileUpload/FileUpload.module.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************/
-/* --- 메인 콘텐츠 --- */
+/* 파일 업로드 페이지의 전체 콘텐츠를 감싸는 2단 그리드 컨테이너 */
 .FileUpload_uploadContainer__PcvK_ {
   width: 100%;
-  max-width: 1200px; /* 헤더/푸터와 동일한 최대 너비 */
-  margin: 0 auto;     /* 중앙 정렬 */
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 2.5rem 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -139,22 +122,26 @@ body {
   align-items: start;
 }
 
+/* 페이지 좌측의 설명 텍스트 영역 */
 .FileUpload_uploadInfo__RZDhH {
   text-align: left;
 }
 
+/* 페이지의 메인 제목 (예: "B/L & INOICE 파일 업로드") */
 .FileUpload_sectionTitle__DDEY6 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
+/* 페이지에 대한 설명 텍스트 */
 .FileUpload_infoDescription__FttLt {
   font-size: 1.2rem;
   color: #6b7280;
   line-height: 1.7;
 }
 
+/* 페이지 우측의 파일 업로드 UI를 감싸는 카드 */
 .FileUpload_uploadActionCard__DfoEC {
   background-color: #ffffff;
   border-radius: 0.75rem;
@@ -166,7 +153,7 @@ body {
   gap: 1.5rem;
 }
 
-/* --- 파일 드롭 영역 --- */
+/* 파일을 드래그 앤 드롭 하거나 클릭할 수 있는 영역 */
 .FileUpload_fileDropZone__hqCIW {
   width: 100%;
   padding: 2.5rem 1.5rem;
@@ -184,11 +171,13 @@ body {
   box-sizing: border-box;
 }
 
+/* 파일 드롭 영역 위에 마우스를 올리거나 파일을 드래그 중일 때의 스타일 */
 .FileUpload_fileDropZone__hqCIW.FileUpload_dragging__TJ17c, .FileUpload_fileDropZone__hqCIW:hover {
   border-color: #2575e6;
   background-color: #f0f5ff;
 }
 
+/* 파일 드롭 영역 내부의 폴더/파일 아이콘 */
 .FileUpload_dropZoneIcon__uA_lE {
   font-size: 2.5rem;
   color: #9ca3af;
@@ -196,11 +185,13 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
+/* 파일을 드래그 중일 때 아이콘 스타일 */
 .FileUpload_fileDropZone__hqCIW.FileUpload_dragging__TJ17c .FileUpload_dropZoneIcon__uA_lE {
   color: #2575e6;
   transform: scale(1.1);
 }
 
+/* '파일을 드래그하거나...' 안내 문구 */
 .FileUpload_dropZoneText__YJNc6 {
   color: #6b7280;
   font-size: 0.95rem;
@@ -212,11 +203,13 @@ body {
   transition: color 0.2s ease-in-out;
 }
 
+/* 파일이 선택되었을 때 파일 이름 텍스트 스타일 */
 .FileUpload_fileDropZone__hqCIW.FileUpload_fileSelected__L7pbT .FileUpload_dropZoneText__YJNc6 {
   color: #1f2937;
   font-weight: 500;
 }
 
+/* 파일을 드래그할 때 나타나는 반투명 오버레이 */
 .FileUpload_dragOverlay__U8E1W {
   position: absolute;
   top: 0;
@@ -236,11 +229,12 @@ body {
   background-color: rgba(240, 245, 255, 0.7);
 }
 
+/* 드래그 중일 때 오버레이를 보이게 하는 스타일 */
 .FileUpload_fileDropZone__hqCIW.FileUpload_dragging__TJ17c .FileUpload_dragOverlay__U8E1W {
   opacity: 1;
 }
 
-/* --- 버튼 및 분석 진행 UI --- */
+/* '분석 시작' 버튼 */
 .FileUpload_analyzeButton__pFI8p {
   display: inline-flex;
   align-items: center;
@@ -257,15 +251,18 @@ body {
   transition: background-color 0.2s;
 }
 
+/* 분석 시작 버튼에 마우스를 올렸을 때의 스타일 */
 .FileUpload_analyzeButton__pFI8p:hover:not(:disabled) {
   background-color: #374151;
 }
 
+/* 분석 시작 버튼이 비활성화되었을 때의 스타일 */
 .FileUpload_analyzeButton__pFI8p:disabled {
   background-color: #d1d5db;
   cursor: not-allowed;
 }
 
+/* 분석 진행 상태를 표시하는 전체 영역 */
 .FileUpload_progressSection__f4Fqo {
   display: flex;
   flex-direction: column;
@@ -277,12 +274,14 @@ body {
   padding-top: 1.5rem;
 }
 
+/* '문서 처리 중...'과 같은 진행 상태 제목 */
 .FileUpload_progressTitle__sjzak {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
+/* 진행 상태에 대한 부가 설명 텍스트 */
 .FileUpload_progressSubtitle__ScpSS {
   font-size: 0.875rem;
   color: #6b7280;
@@ -291,6 +290,7 @@ body {
   margin-bottom: 1rem;
 }
 
+/* 진행률 표시 막대의 배경 트랙 */
 .FileUpload_progressBarBackground__2RNzL {
   width: 100%;
   height: 8px;
@@ -299,10 +299,78 @@ body {
   overflow: hidden;
 }
 
+/* 실제 진행률을 나타내는 파란색 막대 */
 .FileUpload_progressBarFill__QVquV {
   width: 0%;
   height: 100%;
   background-color: #2575e6;
   border-radius: 4px;
   transition: width 0.2s ease-in-out;
+}
+
+/* 파일 목록을 감싸는 컨테이너 */
+.FileUpload_fileListContainer__GnsQC {
+  width: 100%;
+  text-align: left;
+  align-self: flex-start;
+}
+
+/* '선택된 파일' 제목과 '전체 삭제' 버튼을 감싸는 헤더 */
+.FileUpload_fileListHeader__eQmhz {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0 0.5rem;
+}
+
+/* '선택된 파일' 제목 */
+.FileUpload_fileListTitle__XWire {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* '전체 삭제' 버튼 */
+.FileUpload_clearButton__BF5uu {
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* 전체 삭제 버튼에 마우스를 올렸을 때의 스타일 */
+.FileUpload_clearButton__BF5uu:hover {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+/* 파일명 목록 (ul) */
+.FileUpload_fileList__z7mzG {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+/* 개별 파일명 (li) */
+.FileUpload_fileListItem__mMRYI {
+  font-size: 0.9rem;
+  color: #4b5563;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
