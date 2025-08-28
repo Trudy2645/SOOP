@@ -63,16 +63,6 @@
 /*!********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Layout.module.css ***!
   \********************************************************************************************************************************************************************************************************************************************************************************/
-/* 전체 페이지 레이아웃 */
-.Layout_pageContainer__rDNTS {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #f9fafb;
-  color: #111827;
-  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
-}
-
 .Layout_pageContainer__rDNTS {
   display: flex;
   flex-direction: column;
@@ -82,30 +72,46 @@
 .Layout_mainContent__LPlf_ {
   flex-grow: 1;
 }
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/globals.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffff; 
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/features/FileUpload/FileUpload.module.css ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************/
 /* --- 메인 콘텐츠 --- */
-.FileUpload_mainContent__KLQu_ {
-  flex-grow: 1;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2.5rem 2rem;
-}
-
 .FileUpload_uploadContainer__PcvK_ {
   width: 100%;
-  max-width: 1200px; /* 최대 너비 설정 */
-  margin: 0 auto; /* 가운데 정렬 */
-  padding: 2.5rem 2rem; /* 패딩 설정 */
+  max-width: 1200px; /* 헤더/푸터와 동일한 최대 너비 */
+  margin: 0 auto;     /* 중앙 정렬 */
+  padding: 2.5rem 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 4rem;
   gap: 4rem;
   align-items: start;
 }
+
 .FileUpload_uploadInfo__RZDhH {
   text-align: left;
 }

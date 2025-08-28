@@ -1,4 +1,6 @@
 {
+  "/(auth)/login/page": "app/(auth)/login/page.js",
   "/features/CargoInfoTable/page": "app/features/CargoInfoTable/page.js",
-  "/features/FileUpload/page": "app/features/FileUpload/page.js"
+  "/features/FileUpload/page": "app/features/FileUpload/page.js",
+  "/(auth)/signup/page": "app/(auth)/signup/page.js"
 }

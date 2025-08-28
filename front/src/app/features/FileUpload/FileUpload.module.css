@@ -1,22 +1,15 @@
 /* --- 메인 콘텐츠 --- */
-.mainContent {
-  flex-grow: 1;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2.5rem 2rem;
-}
-
 .uploadContainer {
   width: 100%;
-  max-width: 1200px; /* 최대 너비 설정 */
-  margin: 0 auto; /* 가운데 정렬 */
-  padding: 2.5rem 2rem; /* 패딩 설정 */
+  max-width: 1200px; /* 헤더/푸터와 동일한 최대 너비 */
+  margin: 0 auto;     /* 중앙 정렬 */
+  padding: 2.5rem 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
   align-items: start;
 }
+
 .uploadInfo {
   text-align: left;
 }

@@ -1,0 +1,201 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Header.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+/* --- 헤더 영역 --- */
+.Header_header__b54d9 {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #fff;
+}
+.Header_headerContent__oT4m4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.Header_logoContainer__zQZxe {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.Header_logoCircle__qRQh_ {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #d1d5db;
+  border-radius: 9999px;
+}
+.Header_companyName__Bbklh {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.Header_authLinks__q__1N a {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Footer.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+/* --- 푸터 영역 --- */
+.Footer_footer__PyJc9 {
+  border-top: 1px solid #e5e7eb;
+  padding: 1.5rem 2rem;
+  width: 100%;
+}
+.Footer_footerContent__cNO98 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+.Footer_footerLinks__gR0mk {
+  display: flex;
+  gap: 1.5rem;
+}
+.Footer_footerLinks__gR0mk a {
+  color: #6b7280;
+  text-decoration: none;
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Layout.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+.Layout_pageContainer__rDNTS {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.Layout_mainContent__LPlf_ {
+  flex-grow: 1;
+}
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/globals.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffff; 
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/common/Button.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+.Button_button__fOysu {
+  width: 100%;
+  padding: 0.75rem 1.5rem; /* 12px 24px */
+  border-radius: 0.5rem; /* 8px */
+  background-color: #1f2937;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.Button_button__fOysu:hover:not(:disabled) {
+  background-color: #374151;
+}
+
+.Button_button__fOysu:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.Button_button__fOysu:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/common/Input.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************/
+.Input_input__cm641 {
+  width: 100%;
+  padding: 0.75rem 1rem; /* 12px 16px */
+  font-size: 1rem;
+  color: #1f2937;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem; /* 8px */
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.Input_input__cm641::placeholder {
+  color: #9ca3af;
+}
+
+.Input_input__cm641:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/(auth)/AuthForm.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+/* 폼을 감싸는 흰색 카드 */
+.AuthForm_authCard__YLc_c {
+  width: 100%;
+  max-width: 420px; /* 카드 최대 너비 */
+  margin: 4rem auto;   /* 위아래 여백 및 좌우 자동 중앙 정렬 */
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+}
+
+/* '로그인', '회원가입' 제목 */
+.AuthForm_authTitle__bpC1p {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+
+/* form 태그 */
+.AuthForm_form__C7tPD {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* 하단 링크 영역 (예: "계정이 없으신가요?") */
+.AuthForm_linkPrompt___RefT {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.AuthForm_linkPrompt___RefT a {
+  color: #3b82f6;
+  font-weight: 500;
+  text-decoration: none;
+  transition: -webkit-text-decoration 0.2s;
+  transition: text-decoration 0.2s;
+  transition: text-decoration 0.2s, -webkit-text-decoration 0.2s;
+}
+
+.AuthForm_linkPrompt___RefT a:hover {
+  text-decoration: underline;
+}

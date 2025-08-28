@@ -1,24 +1,21 @@
-// src/app/components/common/Button.tsx
+'use client';
 
-import React, { ReactNode } from 'react';
+import React from 'react';
 import styles from './Button.module.css';
 
-interface ButtonProps {
-  children: ReactNode;
-  onClick?: () => void;
-  className?: string; 
-}
+// 'button' 태그가 받을 수 있는 모든 속성을 props 타입으로 정의합니다.
+type ButtonProps = React.ComponentProps<'button'>;
 
-const Button: React.FC<ButtonProps> = ({ children, onClick, className }) => {
-  // 기본 스타일(styles.button)과 추가 스타일(className)을 함께 적용합니다.
-  // 이 부분이 원래 제안했던 코드와 동일합니다.
-  const buttonClasses = `${styles.button} ${className || ''}`;
-
+export default function Button({ children, className, ...props }: ButtonProps) {
+  // props로 받은 className과 기본 className을 함께 적용합니다.
+  const combinedClassName = `${styles.button} ${className || ''}`;
+  
   return (
-    <button onClick={onClick} className={buttonClasses}>
+    <button
+      className={combinedClassName}
+      {...props} // 받은 모든 속성들을 <button> 태그에 그대로 전달합니다.
+    >
       {children}
     </button>
   );
-};
-
-export default Button;
+}

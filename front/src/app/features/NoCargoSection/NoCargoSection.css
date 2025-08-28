@@ -1,25 +1,91 @@
-.no-cargo-container {
+/* src/app/features/BLResultSection/BLResultSection.module.css */
+
+/* 전체 페이지 레이아웃 */
+.pageContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px;
+  min-height: 100vh;
+  background-color: #fff;
+  color: #000;
+  font-family: Arial, sans-serif;
 }
 
-.no-cargo-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 15px;
+/* 헤더 */
+.header {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.no-cargo-description {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 30px;
-}
-
-.no-cargo-actions {
+/* 로고 컨테이너 */
+.logoContainer {
   display: flex;
-  gap: 15px;
+  align-items: center;
+}
+
+/* 로고 원형 */
+.logoCircle {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  background-color: #cbd5e0;
+  border-radius: 9999px;
+}
+
+/* 회사 이름 */
+.companyName {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* 메인 콘텐츠 영역 */
+.mainContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* 결과 컨테이너 */
+.resultContainer {
+  text-align: center;
+}
+
+/* 섹션 타이틀 */
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* BL 번호 */
+.blNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* 버튼 그룹 */
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 복사하기 버튼 (덮어씀) */
+.copyButton {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1.5px solid #000 !important;
+}
+
+/* 푸터 */
+.footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  border-top: 1px solid #e2e8f0;
 }
