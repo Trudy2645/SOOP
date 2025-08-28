@@ -1,135 +1,177 @@
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/features/FileUpload/FileUpload.module.css ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************/
-/* 전체 페이지를 감싸는 최상위 컨테이너 */
-.FileUpload_pageContainer__oye8h {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #ffffff;
-  color: #000;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-}
-
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Header.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
 /* --- 헤더 영역 --- */
-
-/* 페이지 상단 헤더 영역 */
-.FileUpload_header__WpKov {
-  border-bottom: 1px solid #e5e7eb;
+.Header_header__b54d9 {
   padding: 1rem 2rem;
-  width: 100%;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #fff;
 }
-
-/* 헤더 내부 콘텐츠를 중앙 정렬하기 위한 컨테이너 */
-.FileUpload_headerContent__ojd7R {
+.Header_headerContent__oT4m4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
-
-/* 로고와 회사 이름을 묶는 그룹 */
-.FileUpload_logoContainer__kpeCX {
+.Header_logoContainer__zQZxe {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
-
-/* 로고를 나타내는 원형 요소 */
-.FileUpload_logoCircle__mGuty {
-  width: 2rem;
-  height: 2rem;
+.Header_logoCircle__qRQh_ {
+  width: 1.5rem;
+  height: 1.5rem;
   background-color: #d1d5db;
-  border-radius: 50%;
+  border-radius: 9999px;
 }
-
-/* 회사 이름 텍스트 */
-.FileUpload_companyName__yvozW {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin: 0;
+.Header_companyName__Bbklh {
+  font-size: 1rem;
+  font-weight: 500;
 }
-
-/* 로그인/회원가입 링크 */
-.FileUpload_authLinks__Dwd7_ a {
+.Header_authLinks__q__1N a {
   color: #4b5563;
   text-decoration: none;
   font-size: 0.875rem;
 }
-
-/* --- 메인 콘텐츠 영역 --- */
-
-/* 메인 콘텐츠 영역 (헤더와 푸터 사이) */
-.FileUpload_mainContent__KLQu_ {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
-
-/* 파일 업로드 UI를 감싸는 카드 형태의 컨테이너 */
-.FileUpload_uploadCard__RCKb5 {
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  padding: 40px;
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Footer.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+/* --- 푸터 영역 --- */
+.Footer_footer__PyJc9 {
+  border-top: 1px solid #e5e7eb;
+  padding: 1.5rem 2rem;
   width: 100%;
-  max-width: 480px;
+}
+.Footer_footerContent__cNO98 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+.Footer_footerLinks__gR0mk {
+  display: flex;
+  gap: 1.5rem;
+}
+.Footer_footerLinks__gR0mk a {
+  color: #6b7280;
+  text-decoration: none;
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Layout.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+/* 전체 페이지 레이아웃 */
+.Layout_pageContainer__rDNTS {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  text-align: center;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  color: #111827;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 }
 
-/* 업로드 카드의 메인 제목 (예: "B/L") */
-.FileUpload_title__OiiSL {
-  font-size: 2rem;
+.Layout_pageContainer__rDNTS {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.Layout_mainContent__LPlf_ {
+  flex-grow: 1;
+}
+
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/features/FileUpload/FileUpload.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************/
+/* --- 메인 콘텐츠 --- */
+.FileUpload_mainContent__KLQu_ {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+.FileUpload_uploadContainer__PcvK_ {
+  width: 100%;
+  max-width: 1200px; /* 최대 너비 설정 */
+  margin: 0 auto; /* 가운데 정렬 */
+  padding: 2.5rem 2rem; /* 패딩 설정 */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+  gap: 4rem;
+  align-items: start;
+}
+.FileUpload_uploadInfo__RZDhH {
+  text-align: left;
+}
+
+.FileUpload_sectionTitle__DDEY6 {
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #1c1c1e;
-  margin: 0;
+  margin-bottom: 1rem;
 }
 
-/* 업로드 카드의 부제목 */
-.FileUpload_subtitle__VwBNh {
-  font-size: 1rem;
-  color: #6c6c70;
-  margin-top: -10px;
+.FileUpload_infoDescription__FttLt {
+  font-size: 1.2rem;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.FileUpload_uploadActionCard__DfoEC {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 /* --- 파일 드롭 영역 --- */
-
-/* 파일 드래그 앤 드롭 및 클릭을 위한 영역 */
 .FileUpload_fileDropZone__hqCIW {
   width: 100%;
-  padding: 40px 20px;
+  padding: 2.5rem 1.5rem;
   border: 2px dashed #d1d1d6;
   border-radius: 12px;
-  background-color: #f8f9fa;
+  background-color: #f9fafb;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: border-color 0.2s, background-color 0.2s;
+  transition: all 0.2s ease-in-out;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* 파일 드롭존에 마우스를 올리거나 파일을 드래그 중일 때의 스타일 */
 .FileUpload_fileDropZone__hqCIW.FileUpload_dragging__TJ17c, .FileUpload_fileDropZone__hqCIW:hover {
   border-color: #2575e6;
   background-color: #f0f5ff;
 }
 
-/* 드롭존 내부의 안내 텍스트 */
+.FileUpload_dropZoneIcon__uA_lE {
+  font-size: 2.5rem;
+  color: #9ca3af;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.FileUpload_fileDropZone__hqCIW.FileUpload_dragging__TJ17c .FileUpload_dropZoneIcon__uA_lE {
+  color: #2575e6;
+  transform: scale(1.1);
+}
+
 .FileUpload_dropZoneText__YJNc6 {
-  color: #6c6c70;
-  font-size: 1rem;
+  color: #6b7280;
+  font-size: 0.95rem;
   line-height: 1.5;
-  margin: 0;
   white-space: pre-wrap;
   word-break: break-all;
   z-index: 10;
@@ -137,116 +179,85 @@
   transition: color 0.2s ease-in-out;
 }
 
-/* 드롭존 내부의 아이콘 */
-.FileUpload_dropZoneIcon__uA_lE {
-  font-size: 3.5rem;
-  color: #a1a1a6;
-  margin-bottom: 1rem;
-  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
-  z-index: 10;
-  position: relative;
+.FileUpload_fileDropZone__hqCIW.FileUpload_fileSelected__L7pbT .FileUpload_dropZoneText__YJNc6 {
+  color: #1f2937;
+  font-weight: 500;
 }
 
-/* 파일을 드래그 중일 때의 아이콘 스타일 */
-.FileUpload_fileDropZone__hqCIW.FileUpload_dragging__TJ17c .FileUpload_dropZoneIcon__uA_lE {
-  color: #2575e6;
-  transform: translateY(-5px);
-}
-
-/* 파일을 드래그할 때 드롭존 위에 나타나는 반투명 레이어 */
 .FileUpload_dragOverlay__U8E1W {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(37, 117, 230, 0.1);
-  border: 2px dashed #2575e6;
-  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #2575e6;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in-out;
   z-index: 20;
+  background-color: rgba(240, 245, 255, 0.7);
 }
 
-/* 드래그 중일 때 오버레이를 보이게 하는 스타일 */
 .FileUpload_fileDropZone__hqCIW.FileUpload_dragging__TJ17c .FileUpload_dragOverlay__U8E1W {
   opacity: 1;
 }
 
-/* 파일이 선택되었을 때의 안내 텍스트 스타일 */
-.FileUpload_fileDropZone__hqCIW.FileUpload_fileSelected__L7pbT .FileUpload_dropZoneText__YJNc6 {
-  color: #1c1c1e;
-  font-weight: 500;
-}
-
-/* --- 버튼 --- */
-
-/* '분석 시작' 버튼 */
+/* --- 버튼 및 분석 진행 UI --- */
 .FileUpload_analyzeButton__pFI8p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #1c1c1e;
+  background-color: #1f2937;
   color: #ffffff;
   border: none;
   border-radius: 8px;
-  padding: 16px 24px;
-  font-size: 1.125rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   width: 100%;
   transition: background-color 0.2s;
 }
 
-/* 활성화된 버튼에 마우스를 올렸을 때의 스타일 */
 .FileUpload_analyzeButton__pFI8p:hover:not(:disabled) {
-  background-color: #3c3c3e;
+  background-color: #374151;
 }
 
-/* 비활성화된 버튼 스타일 */
 .FileUpload_analyzeButton__pFI8p:disabled {
-  background-color: #d1d1d6;
+  background-color: #d1d5db;
   cursor: not-allowed;
 }
 
-/* --- 분석 진행 UI --- */
-
-/* 분석 진행 상태(프로그레스바)를 표시하는 섹션 */
 .FileUpload_progressSection__f4Fqo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 24px;
+  margin-top: 1rem;
   border-top: 1px solid #e5e7eb;
-  padding-top: 24px;
+  padding-top: 1.5rem;
 }
 
-/* 분석 진행 섹션의 제목 (예: "문서 처리 중...") */
 .FileUpload_progressTitle__sjzak {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin: 0 0 8px 0;
+  margin-bottom: 0.5rem;
 }
 
-/* 분석 진행 섹션의 설명 텍스트 */
 .FileUpload_progressSubtitle__ScpSS {
-  font-size: 0.9rem;
-  color: #6c6c70;
+  font-size: 0.875rem;
+  color: #6b7280;
   max-width: 320px;
   line-height: 1.5;
-  margin-bottom: 24px;
+  margin-bottom: 1rem;
 }
 
-/* 프로그레스바의 배경(트랙) */
 .FileUpload_progressBarBackground__2RNzL {
   width: 100%;
   height: 8px;
@@ -255,43 +266,10 @@
   overflow: hidden;
 }
 
-/* 프로그레스바의 채워지는 부분 */
 .FileUpload_progressBarFill__QVquV {
   width: 0%;
   height: 100%;
   background-color: #2575e6;
   border-radius: 4px;
   transition: width 0.2s ease-in-out;
-}
-
-/* --- 푸터 영역 --- */
-
-/* 페이지 하단 푸터 영역 */
-.FileUpload_footer__CKxIn {
-  border-top: 1px solid #e5e7eb;
-  padding: 1.5rem 2rem;
-  width: 100%;
-}
-
-/* 푸터 내부 콘텐츠를 중앙 정렬하기 위한 컨테이너 */
-.FileUpload_footerContent__NoYOb {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-    color: #6b7280;
-    font-size: 0.875rem;
-}
-
-/* 푸터의 개인정보 처리방침 등 링크 그룹 */
-.FileUpload_footerLinks__fgAqJ {
-  display: flex;
-  gap: 1.5rem;
-}
-
-/* 푸터 내부 링크 */
-.FileUpload_footerLinks__fgAqJ a {
-  color: #6b7280;
-  text-decoration: none;
 }

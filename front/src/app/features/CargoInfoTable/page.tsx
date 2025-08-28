@@ -1,14 +1,12 @@
-// src/app/features/BLResultSection/CargoInfoPage.tsx
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import * as XLSX from 'xlsx';
-import toast from 'react-hot-toast'; // Toaster 대신 toast를 import 합니다.
+import toast from 'react-hot-toast';
 import styles from './CargoInfoTable.module.css';
 import Button from '../../components/common/Button';
 import buttonStyles from '../../components/common/Button.module.css';
-
+import Layout from '../../components/Layout'; // Layout 컴포넌트 import
 
 // 1행의 제목 데이터는 고정이므로 컴포넌트 외부에 선언하여 재사용합니다.
 const headerMap = {
@@ -105,105 +103,82 @@ export default function CargoInfoPage() {
     XLSX.writeFile(wb, "cargo_info.xlsx");
   };
 
-  // 2. '복사하기' 버튼 핸들러 수정
   const handleCopyClick = () => {
     if (!cargoInfo) {
       toast.error('복사할 데이터가 없습니다.');
       return;
     }
 
-    // 복사할 텍스트를 "제목: 값" 형태로 만듭니다.
     const textToCopy = Object.keys(cargoInfo)
       .map(key => {
         const label = headerMap[key as keyof typeof headerMap];
         const value = cargoInfo[key as keyof typeof cargoInfo];
         return `${label}: ${value}`;
       })
-      .join('\n'); // 각 항목을 줄바꿈으로 구분
+      .join('\n');
 
-    // 클립보드에 텍스트를 복사합니다.
     navigator.clipboard.writeText(textToCopy)
       .then(() => {
-        // 성공 시 토스트 메시지를 띄웁니다.
         toast.success('화물 정보가 클립보드에 복사되었습니다.');
       })
       .catch(err => {
-        // 실패 시 에러 메시지를 띄웁니다.
         toast.error('복사에 실패했습니다.');
         console.error('Copy failed:', err);
       });
   };
   
-  // ... (이하 코드는 이전과 동일) ...
   if (!cargoInfo) {
     return (
-        <div className={styles.pageContainer}>
+        <Layout>
             <div className={styles.loadingContainer}>데이터를 불러오는 중입니다...</div>
-        </div>
+        </Layout>
     );
   }
 
   return (
-    <div className={styles.pageContainer}>
-      <header className={styles.header}>
-        <div className={styles.logoContainer}>
-          <div className={styles.logoCircle}></div>
-          <h1 className={styles.companyName}>SOOP INTERNATIONAL CO.,LTD</h1>
-        </div>
-      </header>
-      <main className={styles.mainContent}>
-        <div className={styles.resultContainer}>
-          <div className={styles.titleWithButtons}>
-            <h2 className={styles.sectionTitle}>화물 정보</h2>
-            <div className={styles.buttonGroup}>
-              <Button onClick={handleExcelDownloadClick} className={styles.copyButton}>엑셀로 다운로드</Button>
-              <Button onClick={handleCopyClick} className={buttonStyles.button}>복사하기</Button>
-            </div>
+    <Layout>
+      <div className={styles.resultContainer}>
+        <div className={styles.titleWithButtons}>
+          <h2 className={styles.sectionTitle}>화물 정보</h2>
+          <div className={styles.buttonGroup}>
+            <Button onClick={handleExcelDownloadClick} className={styles.copyButton}>엑셀로 다운로드</Button>
+            <Button onClick={handleCopyClick} className={buttonStyles.button}>복사하기</Button>
           </div>
-          <p className={styles.infoDescription}>
-            아래 정보를 복사하여 사용하세요.
-          </p>
-          <div className={styles.infoSection}>
-            <table className={styles.infoTable}>
-              <tbody>
-                {
-                  Object.keys(cargoInfo).filter((_, index) => index % 2 === 0).map((key, index) => {
-                    const key1 = Object.keys(cargoInfo)[index * 2];
-                    const key2 = Object.keys(cargoInfo)[index * 2 + 1];
+        </div>
+        <p className={styles.infoDescription}>
+          아래 정보를 복사하여 사용하세요.
+        </p>
+        <div className={styles.infoSection}>
+          <table className={styles.infoTable}>
+            <tbody>
+              {
+                Object.keys(cargoInfo).filter((_, index) => index % 2 === 0).map((key, index) => {
+                  const key1 = Object.keys(cargoInfo)[index * 2];
+                  const key2 = Object.keys(cargoInfo)[index * 2 + 1];
 
-                    return (
-                      <tr key={key1}>
-                        <td className={styles.infoLabelCell}>{headerMap[key1 as keyof typeof headerMap]}</td>
-                        <td className={styles.infoValueCell}>{cargoInfo[key1 as keyof typeof cargoInfo]}</td>
-                        {key2 ? (
-                          <>
-                            <td className={styles.infoLabelCell}>{headerMap[key2 as keyof typeof headerMap]}</td>
-                            <td className={styles.infoValueCell}>{cargoInfo[key2 as keyof typeof cargoInfo]}</td>
-                          </>
-                        ) : (
-                          <>
-                            <td className={styles.infoLabelCell}></td>
-                            <td className={styles.infoValueCell}></td>
-                          </>
-                        )}
-                      </tr>
-                    )
-                  })
-                }
-              </tbody>
-            </table>
-          </div>
+                  return (
+                    <tr key={key1}>
+                      <td className={styles.infoLabelCell}>{headerMap[key1 as keyof typeof headerMap]}</td>
+                      <td className={styles.infoValueCell}>{String(cargoInfo[key1 as keyof typeof cargoInfo])}</td>
+                      {key2 ? (
+                        <>
+                          <td className={styles.infoLabelCell}>{headerMap[key2 as keyof typeof headerMap]}</td>
+                          <td className={styles.infoValueCell}>{String(cargoInfo[key2 as keyof typeof cargoInfo])}</td>
+                        </>
+                      ) : (
+                        <>
+                          <td className={styles.infoLabelCell}></td>
+                          <td className={styles.infoValueCell}></td>
+                        </>
+                      )}
+                    </tr>
+                  )
+                })
+              }
+            </tbody>
+          </table>
         </div>
-      </main>
-      <footer className={styles.footer}>
-         <div className={styles.footerContent}>
-          <span>© 화물 관리 시스템</span>
-          <div className={styles.footerLinks}>
-            <a href="#">개인정보 처리방침</a>
-            <a href="#">이용약관</a>
-          </div>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </Layout>
   );
 }

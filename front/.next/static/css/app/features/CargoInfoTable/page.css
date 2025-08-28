@@ -1,58 +1,19 @@
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/features/CargoInfoTable/CargoInfoTable.module.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************************/
-/* src/app/features/BLResultSection/BLResultSection.module.css */
+/* --- 메인 콘텐츠 영역 --- */
 
-/* 전체 페이지 레이아웃 */
-.CargoInfoTable_pageContainer__RieyO {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #f9fafb;
-  color: #111827;
-  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
-}
+/* 👇 pageContainer, header, footer 관련 스타일은 모두 삭제했습니다. */
 
-/* 헤더 */
-.CargoInfoTable_header__ygFZq {
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #e5e7eb;
-  background-color: #fff;
-}
-
-.CargoInfoTable_logoContainer__9NHH2 {
-  display: flex;
-  align-items: center;
-}
-
-.CargoInfoTable_logoCircle__Sh7OY {
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: 0.5rem;
-  background-color: #d1d5db;
-  border-radius: 9999px;
-}
-
-.CargoInfoTable_companyName__GQIKo {
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-/* 메인 콘텐츠 영역 */
-.CargoInfoTable_mainContent__I_c09 {
-  flex-grow: 1;
+/* mainContent의 역할을 이 컨테이너가 하도록 스타일을 적용합니다. */
+.CargoInfoTable_resultContainer__uICvB {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2.5rem 2rem;
 }
 
-/* 결과 컨테이너 */
-.CargoInfoTable_resultContainer__uICvB {
-  width: 100%;
-}
-
-/* 타이틀과 버튼 그룹 */
+/* 페이지 제목과 버튼 그룹을 한 줄에 배치하는 컨테이너 */
 .CargoInfoTable_titleWithButtons__lBVzE {
   display: flex;
   justify-content: space-between;
@@ -60,16 +21,19 @@
   margin-bottom: 0.5rem;
 }
 
+/* 페이지의 메인 제목 (예: "화물 정보") */
 .CargoInfoTable_sectionTitle__GxfUY {
-  font-size: 2rem; /* 글자 크기 키움 (1.8rem -> 2rem) */
+  font-size: 2rem;
   font-weight: 700;
 }
 
+/* '엑셀 다운로드', '복사하기' 등 버튼을 묶는 그룹 */
 .CargoInfoTable_buttonGroup__CfSu5 {
   display: flex;
   gap: 0.75rem;
 }
 
+/* 버튼 그룹 내 특정 버튼(흰색 배경)에 대한 커스텀 스타일 */
 .CargoInfoTable_copyButton__5dfyu {
   background-color: #fff !important;
   color: #374151 !important;
@@ -77,14 +41,16 @@
   font-weight: 500 !important;
 }
 
-/* 정보 설명 텍스트 */
+/* 페이지의 설명 텍스트 */
 .CargoInfoTable_infoDescription__rKxCK {
-  font-size: 1rem; /* 글자 크기 키움 (0.95rem -> 1rem) */
+  font-size: 1rem;
   color: #6b7280;
   margin-bottom: 1.5rem;
 }
 
-/* 정보 섹션 카드 */
+/* --- 정보 표시 섹션 --- */
+
+/* 정보 테이블을 감싸는 카드 형태의 섹션 */
 .CargoInfoTable_infoSection__SeAGA {
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
@@ -93,25 +59,26 @@
   overflow: hidden;
 }
 
-/* 정보 테이블 */
+/* 화물 정보를 표시하는 테이블 */
 .CargoInfoTable_infoTable___K2eo {
   width: 100%;
   border-collapse: collapse;
 }
 
+/* 테이블의 마지막 행(tr) 아래쪽 테두리 제거 */
 .CargoInfoTable_infoTable___K2eo tr:last-child td {
   border-bottom: none;
 }
 
-/* 테이블 셀 */
+/* 테이블의 모든 셀(td)에 대한 공통 스타일 */
 .CargoInfoTable_infoTable___K2eo td {
-  padding: 1.1rem 1.25rem; /* 폰트 크기에 맞춰 패딩 조정 */
-  font-size: 1rem; /* 글자 크기 키움 (0.9rem -> 1rem) */
+  padding: 1.1rem 1.25rem;
+  font-size: 1rem;
   border-bottom: 1px solid #f3f4f6;
   vertical-align: middle;
 }
 
-/* 테이블의 제목(label) 셀 */
+/* 테이블의 제목 셀(예: "B/L 번호") */
 .CargoInfoTable_infoLabelCell__iVXFy {
   width: 15%;
   min-width: 140px;
@@ -120,7 +87,7 @@
   background-color: #f9fafb;
 }
 
-/* 테이블의 값(value) 셀 */
+/* 테이블의 값 셀(예: "MGI12566036") */
 .CargoInfoTable_infoValueCell__ld7Uq {
   width: 35%;
   font-weight: 500;
@@ -128,42 +95,22 @@
   word-break: break-all;
 }
 
-/* 푸터 */
-.CargoInfoTable_footer__NjtQr {
-  padding: 1.5rem 2rem;
-  width: 100%;
-  background-color: #fff;
-  border-top: 1px solid #e5e7eb;
-}
+/* --- 데이터 로딩 UI --- */
 
-.CargoInfoTable_footerContent__wC3OJ {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #6b7280;
-    font-size: 0.875rem;
-}
-
-.CargoInfoTable_footerLinks__bOYDu {
-  display: flex;
-  gap: 1.5rem;
-}
-
-/* 데이터 로딩 중 UI 스타일 */
+/* 데이터 로딩 중에 표시될 컨테이너 */
 .CargoInfoTable_loadingContainer__W_Ny4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  flex-grow: 1; /* Layout 안에서 남은 공간을 채우도록 flex-grow 추가 */
   padding: 2rem;
   font-size: 1.2rem;
   font-weight: 500;
   color: #6b7280;
 }
 
+/* 로딩 중임을 나타내는 스피너 아이콘 */
 .CargoInfoTable_loadingContainer__W_Ny4::before {
   content: '';
   display: block;
@@ -176,6 +123,7 @@
   animation: CargoInfoTable_spin__MDTBA 1s linear infinite;
 }
 
+/* 스피너 회전 애니메이션 정의 */
 @keyframes CargoInfoTable_spin__MDTBA {
   to { transform: rotate(360deg); }
 }
@@ -198,3 +146,88 @@
   outline: none;
   font-size: 18px;
 }
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Header.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+/* --- 헤더 영역 --- */
+.Header_header__b54d9 {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #fff;
+}
+.Header_headerContent__oT4m4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.Header_logoContainer__zQZxe {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.Header_logoCircle__qRQh_ {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #d1d5db;
+  border-radius: 9999px;
+}
+.Header_companyName__Bbklh {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.Header_authLinks__q__1N a {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Footer.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+/* --- 푸터 영역 --- */
+.Footer_footer__PyJc9 {
+  border-top: 1px solid #e5e7eb;
+  padding: 1.5rem 2rem;
+  width: 100%;
+}
+.Footer_footerContent__cNO98 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+.Footer_footerLinks__gR0mk {
+  display: flex;
+  gap: 1.5rem;
+}
+.Footer_footerLinks__gR0mk a {
+  color: #6b7280;
+  text-decoration: none;
+}
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Layout.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+/* 전체 페이지 레이아웃 */
+.Layout_pageContainer__rDNTS {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  color: #111827;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+
+.Layout_pageContainer__rDNTS {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.Layout_mainContent__LPlf_ {
+  flex-grow: 1;
+}
+
