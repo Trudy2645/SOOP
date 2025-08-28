@@ -1,8 +1,6 @@
 /* --- 메인 콘텐츠 영역 --- */
 
-/* 👇 pageContainer, header, footer 관련 스타일은 모두 삭제했습니다. */
-
-/* mainContent의 역할을 이 컨테이너가 하도록 스타일을 적용합니다. */
+/* mainContent의 역할을 이 컨테이너가 하도록 스타일을 적용 */
 .resultContainer {
   width: 100%;
   max-width: 1200px;
@@ -123,4 +121,12 @@
 /* 스피너 회전 애니메이션 정의 */
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+/* '엑셀로 다운로드' 버튼을 흰색 배경, 초록색 테두리/글자로 수정 */
+.excelDownloadButton {
+  background-color: #ffffff !important;
+  color: #2E7D32 !important;         /* 진한 초록색 글자색 */
+  border: 1px solid #66BB6A !important; /* 초록색 테두리 */
+  font-weight: 600;
 }

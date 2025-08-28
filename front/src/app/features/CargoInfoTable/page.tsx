@@ -5,8 +5,10 @@ import * as XLSX from 'xlsx';
 import toast from 'react-hot-toast';
 import styles from './CargoInfoTable.module.css';
 import Button from '../../components/common/Button';
-import buttonStyles from '../../components/common/Button.module.css';
-import Layout from '../../components/Layout'; // Layout 컴포넌트 import
+import buttonStyles from '../../components/common/Button.module.css'; // 기본 버튼 스타일 필요할 때 사용
+import Layout from '../../components/Layout';
+import Image from 'next/image'; // Image 컴포넌트 import
+import ExcelIcon from '../../../../public/excel_logo.svg'; 
 
 // 1행의 제목 데이터는 고정이므로 컴포넌트 외부에 선언하여 재사용합니다.
 const headerMap = {
@@ -141,7 +143,21 @@ export default function CargoInfoPage() {
         <div className={styles.titleWithButtons}>
           <h2 className={styles.sectionTitle}>화물 정보</h2>
           <div className={styles.buttonGroup}>
-            <Button onClick={handleExcelDownloadClick} className={styles.copyButton}>엑셀로 다운로드</Button>
+            <Button 
+              onClick={handleExcelDownloadClick} 
+              className={styles.excelDownloadButton} // 엑셀 버튼 전용 스타일 클래스 적용
+              icon={
+                <Image // Image 컴포넌트로 SVG를 렌더링
+                  src={ExcelIcon}
+                  alt="Excel Icon"
+                  width={20} // 아이콘의 적절한 크기
+                  height={20}
+                  className={styles.excelButtonIcon} // 아이콘 자체에 대한 스타일 클래스
+                />
+              }
+            >
+              엑셀로 다운로드
+            </Button>
             <Button onClick={handleCopyClick} className={buttonStyles.button}>복사하기</Button>
           </div>
         </div>

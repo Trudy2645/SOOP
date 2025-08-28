@@ -1,7 +1,12 @@
 .button {
-  width: 100%;
-  padding: 0.75rem 1.5rem; /* 12px 24px */
-  border-radius: 0.5rem; /* 8px */
+  display: inline-flex; /* 👇 아이콘과 텍스트를 나란히 배치 */
+  align-items: center;  /* 👇 세로 중앙 정렬 */
+  justify-content: center; /* 👇 가로 중앙 정렬 (필요시) */
+  gap: 0.5rem;          /* 👇 아이콘과 텍스트 사이 간격 */
+  
+  white-space: nowrap;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
   background-color: #1f2937;
   color: #ffffff;
   border: none;
@@ -14,13 +19,26 @@
 
 .button:hover:not(:disabled) {
   background-color: #374151;
+  transform: translateY(-1px);
 }
 
 .button:active:not(:disabled) {
-  transform: scale(0.98);
+  transform: translateY(0);
 }
 
 .button:disabled {
   background-color: #d1d5db;
   cursor: not-allowed;
+}
+
+/* 추가: 아이콘 자체에 대한 스타일 (필요시) */
+.buttonIcon {
+  display: flex; /* SVG 아이콘 정렬을 위해 */
+  align-items: center;
+}
+.buttonIcon svg {
+  width: 1.25rem; /* 아이콘 크기 조절 */
+  height: 1.25rem;
+  /* 아이콘 색상을 텍스트 색상에 맞추려면 */
+  /* stroke: currentColor; */ 
 }

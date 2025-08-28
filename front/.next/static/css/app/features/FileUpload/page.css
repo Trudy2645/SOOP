@@ -1,7 +1,8 @@
 /*!********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Header.module.css ***!
   \********************************************************************************************************************************************************************************************************************************************************************************/
-/* --- 헤더 영역 --- */
+/* ... (기존 헤더 스타일은 그대로 유지) ... */
+
 .Header_header__b54d9 {
   padding: 1rem 2rem;
   border-bottom: 1px solid #e5e7eb;
@@ -14,25 +15,51 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+.Header_logoLink__50Wcc { /* Link 컴포넌트의 기본 스타일 제거 */
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex; /* logoContainer가 Link의 유일한 자식이 되므로 Link에 flex 적용 */
+  align-items: center;
+}
 .Header_logoContainer__zQZxe {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.75rem; /* 로고 이미지와 텍스트 사이 간격 */
 }
-.Header_logoCircle__qRQh_ {
+/* 👇 이 부분은 Image 컴포넌트 사용으로 인해 더 이상 필요 없습니다.
+.logoCircle {
   width: 1.5rem;
   height: 1.5rem;
   background-color: #d1d5db;
   border-radius: 9999px;
 }
+*/
+/* Image 컴포넌트에 적용할 스타일 */
+.Header_actualLogo__h0chO {
+  /* 필요에 따라 로고 이미지의 크기나 다른 스타일을 지정합니다. */
+  /* width와 height는 next/image에서 props로 주므로, 여기서 오버라이드할 필요는 없습니다. */
+  /* 예를 들어, 반응형으로 만들고 싶다면 max-width: 100%; height: auto; 등을 추가할 수 있습니다. */
+}
+
 .Header_companyName__Bbklh {
   font-size: 1rem;
   font-weight: 500;
+  color: #1f2937; /* 글자색을 명확히 지정 */
+  white-space: nowrap; /* 글자가 줄바꿈되지 않도록 방지 */
+}
+.Header_authLinks__q__1N {
+  display: flex;
+  gap: 1rem; /* 로그인/회원가입 링크 사이 간격 */
 }
 .Header_authLinks__q__1N a {
   color: #4b5563;
   text-decoration: none;
   font-size: 0.875rem;
+  transition: color 0.2s;
+}
+.Header_authLinks__q__1N a:hover {
+  color: #1f2937; /* 호버 시 색상 변경 */
 }
 /*!********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/components/Footer.module.css ***!
