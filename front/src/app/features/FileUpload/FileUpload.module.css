@@ -1,3 +1,4 @@
+/* --- 메인 콘텐츠 --- */
 /* 파일 업로드 페이지의 전체 콘텐츠를 감싸는 2단 그리드 컨테이너 */
 .uploadContainer {
   width: 100%;
@@ -10,12 +11,13 @@
   align-items: start;
 }
 
+/* --- 좌측 설명 영역 --- */
 /* 페이지 좌측의 설명 텍스트 영역 */
 .uploadInfo {
   text-align: left;
 }
 
-/* 페이지의 메인 제목 (예: "B/L & INOICE 파일 업로드") */
+/* 페이지의 메인 제목 */
 .sectionTitle {
   font-size: 2.5rem;
   font-weight: 700;
@@ -29,6 +31,7 @@
   line-height: 1.7;
 }
 
+/* --- 우측 업로드 카드 --- */
 /* 페이지 우측의 파일 업로드 UI를 감싸는 카드 */
 .uploadActionCard {
   background-color: #ffffff;
@@ -41,10 +44,32 @@
   gap: 1.5rem;
 }
 
+/* B/L, INVOICE 드롭존을 묶는 컨테이너 */
+.dropZoneContainer {
+  display: grid;
+  grid-template-columns: 1fr; /* 세로로 배치 */
+  gap: 1.5rem; /* 각 드롭존 사이의 간격 */
+}
+
+/* 개별 파일 드롭존 래퍼 (제목 포함) */
+.dropZoneWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* 각 드롭존의 제목 (예: "B/L 파일") */
+.dropZoneTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  text-align: left;
+}
+
 /* 파일을 드래그 앤 드롭 하거나 클릭할 수 있는 영역 */
 .fileDropZone {
   width: 100%;
-  padding: 2.5rem 1.5rem;
+  padding: 2rem 1.5rem; /* 패딩 조정 */
   border: 2px dashed #d1d1d6;
   border-radius: 12px;
   background-color: #f9fafb;
@@ -65,38 +90,69 @@
   background-color: #f0f5ff;
 }
 
-/* 파일 드롭 영역 내부의 폴더/파일 아이콘 */
+/* 파일 드롭 영역 내부의 폴더 아이콘 */
 .dropZoneIcon {
-  font-size: 2.5rem;
+  font-size: 2rem; /* 아이콘 크기 조정 */
   color: #9ca3af;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   transition: all 0.2s ease-in-out;
-}
-
-/* 파일을 드래그 중일 때 아이콘 스타일 */
-.fileDropZone.dragging .dropZoneIcon {
-  color: #2575e6;
-  transform: scale(1.1);
 }
 
 /* '파일을 드래그하거나...' 안내 문구 */
 .dropZoneText {
   color: #6b7280;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   white-space: pre-wrap;
   word-break: break-all;
-  z-index: 10;
-  position: relative;
-  transition: color 0.2s ease-in-out;
 }
 
-/* 파일이 선택되었을 때 파일 이름 텍스트 스타일 */
-.fileDropZone.fileSelected .dropZoneText {
-  color: #1f2937;
+/* --- 선택된 파일 표시 UI --- */
+/* 파일이 선택되었을 때 파일 정보를 표시하는 컨테이너 */
+.selectedFileDisplay {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #f0f5ff;
+  border: 1px solid #cce0ff;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* 선택된 파일 이름 */
+.fileName {
+  font-size: 0.9rem;
   font-weight: 500;
+  color: #1f2937;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 파일 이름이 길 경우 ... 처리 */
+  padding-right: 1rem;
 }
 
+/* 파일 삭제 버튼 */
+.clearButton {
+  background: none;
+  border: 1px solid #d1d5db;
+  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.clearButton:hover {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  border-color: #adb5bd;
+}
+
+
+/* --- 드래그 오버레이 --- */
 /* 파일을 드래그할 때 나타나는 반투명 오버레이 */
 .dragOverlay {
   position: absolute;
@@ -122,6 +178,7 @@
   opacity: 1;
 }
 
+/* --- 분석 버튼 및 진행률 --- */
 /* '분석 시작' 버튼 */
 .analyzeButton {
   display: inline-flex;
@@ -194,71 +251,4 @@
   background-color: #2575e6;
   border-radius: 4px;
   transition: width 0.2s ease-in-out;
-}
-
-/* 파일 목록을 감싸는 컨테이너 */
-.fileListContainer {
-  width: 100%;
-  text-align: left;
-  align-self: flex-start;
-}
-
-/* '선택된 파일' 제목과 '전체 삭제' 버튼을 감싸는 헤더 */
-.fileListHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.75rem;
-  padding: 0 0.5rem;
-}
-
-/* '선택된 파일' 제목 */
-.fileListTitle {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #374151;
-}
-
-/* '전체 삭제' 버튼 */
-.clearButton {
-  background: none;
-  border: none;
-  color: #6b7280;
-  font-size: 0.8rem;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-/* 전체 삭제 버튼에 마우스를 올렸을 때의 스타일 */
-.clearButton:hover {
-  background-color: #f3f4f6;
-  color: #1f2937;
-}
-
-/* 파일명 목록 (ul) */
-.fileList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  max-height: 150px;
-  overflow-y: auto;
-}
-
-/* 개별 파일명 (li) */
-.fileListItem {
-  font-size: 0.9rem;
-  color: #4b5563;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  background-color: #ffffff;
-  margin-bottom: 0.25rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }

@@ -17,12 +17,6 @@
       "static/css/app/features/CargoInfoTable/page.css",
       "static/chunks/app/features/CargoInfoTable/page.js"
     ],
-    "/(auth)/login/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(auth)/login/page.css",
-      "static/chunks/app/(auth)/login/page.js"
-    ],
     "/(auth)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -35,11 +29,11 @@
       "static/css/app/(auth)/signup/page.css",
       "static/chunks/app/(auth)/signup/page.js"
     ],
-    "/features/NoCargoSection/page": [
+    "/(auth)/login/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/features/NoCargoSection/page.css",
-      "static/chunks/app/features/NoCargoSection/page.js"
+      "static/css/app/(auth)/login/page.css",
+      "static/chunks/app/(auth)/login/page.js"
     ]
   }
 }

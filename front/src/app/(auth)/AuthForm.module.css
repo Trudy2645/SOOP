@@ -23,7 +23,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem; /* 간격 살짝 조정 */
 }
 
 /* 하단 링크 영역 (예: "계정이 없으신가요?") */
@@ -43,4 +43,16 @@
 
 .linkPrompt a:hover {
   text-decoration: underline;
+}
+
+/* --- 👇 [추가] 에러 메시지 스타일 --- */
+.errorWrapper {
+  /* 에러 메시지가 나타나도 레이아웃이 밀리지 않도록 최소 높이 설정 */
+  min-height: 1.25rem; 
+}
+
+.errorMessage {
+  color: #ef4444; /* 빨간색 텍스트 */
+  font-size: 0.8rem;
+  padding-left: 0.25rem;
 }

@@ -63,7 +63,7 @@ export default function CargoInfoPage() {
         blNumber: "MGI12566036",
         hsCode: "8541.40.1000",
         standardItemName: "광다이오드",
-        tradingItemName: "LED CHIP",
+        tradingItemName: "",
         declarationNumber: "123456789",
         lineNumber: "001",
         spec1: "MODEL: A1-CHIP, 3W",
@@ -74,8 +74,8 @@ export default function CargoInfoPage() {
         quantityUnit: "EA",
         unitPrice: 0.08,
         amount: 4000,
-        repetitiveImportRegNo: "R-1234-5678",
-        partCode: "P-LED-A1-CHIP",
+        repetitiveImportRegNo: "",
+        partCode: "",
       };
 
       setCargoInfo(dummyData);

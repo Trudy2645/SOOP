@@ -9,7 +9,7 @@
   border-radius: 0.5rem;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
-  text-align: center;
+  text-align: left;
 }
 
 /* '아이디를 입력하세요' 등 placeholder 텍스트의 스타일 */

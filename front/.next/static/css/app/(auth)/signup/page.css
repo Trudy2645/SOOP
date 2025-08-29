@@ -170,7 +170,7 @@ body {
   border-radius: 0.5rem;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
-  text-align: center;
+  text-align: left;
 }
 
 /* '아이디를 입력하세요' 등 placeholder 텍스트의 스타일 */
@@ -211,7 +211,7 @@ body {
 .AuthForm_form__C7tPD {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem; /* 간격 살짝 조정 */
 }
 
 /* 하단 링크 영역 (예: "계정이 없으신가요?") */
@@ -233,4 +233,16 @@ body {
 
 .AuthForm_linkPrompt___RefT a:hover {
   text-decoration: underline;
+}
+
+/* --- 👇 [추가] 에러 메시지 스타일 --- */
+.AuthForm_errorWrapper__iBSv3 {
+  /* 에러 메시지가 나타나도 레이아웃이 밀리지 않도록 최소 높이 설정 */
+  min-height: 1.25rem; 
+}
+
+.AuthForm_errorMessage__hA881 {
+  color: #ef4444; /* 빨간색 텍스트 */
+  font-size: 0.8rem;
+  padding-left: 0.25rem;
 }
